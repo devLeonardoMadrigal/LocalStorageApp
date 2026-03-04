@@ -44,7 +44,7 @@ class ShoppingViewModel @Inject constructor(private val repository: ShoppingRepo
 
     fun toggleBought(item: ShoppingItem){
         viewModelScope.launch {
-            repository.updateItem(item.copy(isBought = item.isBought))
+            repository.updateItem(item.copy(isBought = !item.isBought))
         }
     }
 
