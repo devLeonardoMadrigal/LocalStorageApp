@@ -24,7 +24,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             LocalStorageAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Column(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
+                    Column(modifier = Modifier.fillMaxSize()
+                        .padding(innerPadding)) {
                         ShoppingScreen()
                     }
                 }
